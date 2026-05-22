@@ -7,7 +7,7 @@ jobs:
   send-build-info:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: CodeLogicIncEngineering/actions-checkout@v4
 
       - name: Send CodeLogic Build Info
         uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@feature/CAPE-8816_create_github_action
