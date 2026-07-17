@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Send CodeLogic Build Info
         if: always()
-        uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@master
+        uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@v1
         with:
           codelogic_host: ${{ vars.CODELOGIC_HOST }}
           agent_uuid: ${{ secrets.AGENT_UUID }}
@@ -49,7 +49,7 @@ Capture build output to a file under the workspace, then pass it to the action:
         run: mvn -B package 2>&1 | tee "${GITHUB_WORKSPACE}/build.log"
       - name: Send CodeLogic Build Info
         if: always()
-        uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@master
+        uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@v1
         with:
           codelogic_host: ${{ vars.CODELOGIC_HOST }}
           agent_uuid: ${{ secrets.AGENT_UUID }}
