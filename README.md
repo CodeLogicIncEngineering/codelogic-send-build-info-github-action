@@ -30,7 +30,7 @@ jobs:
         uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@v1
         with:
           codelogic_host: ${{ vars.CODELOGIC_HOST }}
-          agent_uuid: ${{ secrets.AGENT_UUID }}
+          agent_uuid: ${{ vars.AGENT_UUID }}
           agent_password: ${{ secrets.AGENT_PASSWORD }}
           scan_path: /github/workspace
           job_name: ${{ github.workflow }}
@@ -52,7 +52,7 @@ Capture build output to a file under the workspace, then pass it to the action:
         uses: CodeLogicIncEngineering/codelogic-send-build-info-github-action@v1
         with:
           codelogic_host: ${{ vars.CODELOGIC_HOST }}
-          agent_uuid: ${{ secrets.AGENT_UUID }}
+          agent_uuid: ${{ vars.AGENT_UUID }}
           agent_password: ${{ secrets.AGENT_PASSWORD }}
           scan_path: /github/workspace
           job_name: ${{ github.workflow }}
